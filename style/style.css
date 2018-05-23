@@ -79,6 +79,7 @@ html body{
     margin-left: 50px;
     color:#fff;
     cursor:pointer;
+    z-index:3;
 }
 .sidebar-menu-expanded{
     width:100%;

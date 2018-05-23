@@ -26,7 +26,6 @@ let PopDetails = (props,details,toggle)=> {
         <div className="background-overlay" style={{backgroundImage:`url(${album["im:image"][2].label})`}}></div>
         <div className="container">
             <div className="row">
-            <div className="close-btn" onClick={props.toggle}>x</div>
                 <div className="col-md-6 col-sm-12">
                     <img className="mx-auto d-block" src={album["im:image"][2].label}/>
                 </div>
