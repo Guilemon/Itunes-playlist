@@ -31,8 +31,12 @@ a.itunes-preview,a.itunes-preview:hover,a.itunes-preview:focus{
 }
 
 .wrapper--sidebar{
-    position:relative;
     padding-top:60px;
+}
+@media only screen and (max-width: 577px){
+    .wrapper--sidebar{
+        position:relative;
+    }
 }
 
 html body{
