@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 module.exports = {
   entry: ['./src/index.js'],
   output: {
@@ -11,7 +12,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015', 'stage-1']
+          presets: ['react', ['es2015',{'modules':false}], 'stage-1']
         }
       }
     ]
@@ -19,6 +20,18 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  plugins: [
+  new webpack.DefinePlugin({
+  "process.env": {
+     NODE_ENV: JSON.stringify("production")
+   }
+   }),
+   new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      output: {
+        comments: false,
+      },
+  })],
   devServer: {
     historyApiFallback: true,
     contentBase: './',

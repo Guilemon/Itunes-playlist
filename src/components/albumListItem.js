@@ -1,5 +1,5 @@
 import React from 'react'
-import LinesEllipsis from 'react-lines-ellipsis'
+import Dotdotdot from 'react-dotdotdot'
 
 const AlbumItem = (props,single,selected,menuToggle)=>{
     let data = props.single
@@ -8,24 +8,16 @@ const AlbumItem = (props,single,selected,menuToggle)=>{
     return (
         <div className="col-md-3 col-sm-12 px-0" onClick={()=>{selectedAlbum(data);showMenu(true)}}>
           <img className="mx-auto d-block img-fill" src={data["im:image"][2].label}/>
-          <LinesEllipsis
-            className="pt-3 px-3"
-            text={data["im:name"].label}
-            maxLine='2'
-            ellipsis='...'
-            trimRight
-            basedOn='letters'
-            component="h5"
-          />
-          <LinesEllipsis
-            className="py-2 px-3"
-            text={data["im:artist"].label}
-            maxLine='2'
-            ellipsis='...'
-            trimRight
-            basedOn='letters'
-            component="h6"
-          />
+          <Dotdotdot clamp={3}>
+            <h5 className="pt-3 px-3">
+              {data["im:name"].label}
+            </h5>
+          </Dotdotdot>
+          <Dotdotdot clamp={3}>
+              <h6 className="py-2 px-3">
+                {data["im:artist"].label}
+              </h6>
+          </Dotdotdot>
       </div>
     )
 }
