@@ -1,7 +1,6 @@
 import React from 'react'
 import PopDetails from './popDetails'
 const SideBar = (props,menu,toggle)=>{
-    console.log(props)
     const showMenu = props.menu
     const albumToShow = props.selectedAlbum
     const menuExpanded = (showMenu)?'sidebar-menu-expanded':'sidebar-menu-collapsed'
