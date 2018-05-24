@@ -24,21 +24,21 @@ Webpack was used for bundling the app modules together.
 * **Src Folder:** This folder contains the modular js files.
 
 ## The design of App is as follows:
-    * All component files are present in component folders.
-    ```Index.js``` file ,which is located outside components folder, calls to root React Component defined in ```app.js``` file and using ```react-dom``` render method, attaches the app component to root html tag(defined in ```index.html```)
+* All component files are present in component folders.
+```Index.js``` file ,which is located outside components folder, calls to root React Component defined in ```app.js``` file and using ```react-dom``` render method, attaches the app component to root html tag(defined in ```index.html```)
 
-    * In App.js file, the api data is fetched and passed to a component loop.
+* In App.js file, the api data is fetched and passed to a component loop.
 
-    The component loop result is stored in a variable and called in app's render function.
+The component loop result is stored in a variable and called in app's render function.
 
-    * On clicking the grid component, a full page sidebar pop ups.
+* On clicking the grid component, a full page sidebar pop ups.
 
-    To handle its transitions, a state ```showMenu``` is used. This state is passed as prop to Sidebar component as prop. In ```sidebar.js```, the passed prop is used to determine class to be applied on sidebar component. CSS transition property is used for sidebar transitions on click of grid element.
+To handle its transitions, a state ```showMenu``` is used. This state is passed as prop to Sidebar component as prop. In ```sidebar.js```, the passed prop is used to determine class to be applied on sidebar component. CSS transition property is used for sidebar transitions on click of grid element.
 
-    * The sidebar component contains additional information regarding the clicked album.
+* The sidebar component contains additional information regarding the clicked album.
 
-    This is achived by assigning the data of clicked element to ```selectedAlbum``` state. On Click, the ```selectedAlbum``` state is updated with clicked elements data dynamically. The element and action for this is mentioned in ```albumListItem.js``` file. It also assigns ```showMenu``` state to true which triggers the sidebar to be activated.
+This is achived by assigning the data of clicked element to ```selectedAlbum``` state. On Click, the ```selectedAlbum``` state is updated with clicked elements data dynamically. The element and action for this is mentioned in ```albumListItem.js``` file. It also assigns ```showMenu``` state to true which triggers the sidebar to be activated.
 
-    The ```selectedAlbum``` state is passed as prop to ```popDetails.js``` file where the particular information is extracted and put in template file.
+The ```selectedAlbum``` state is passed as prop to ```popDetails.js``` file where the particular information is extracted and put in template file.
 
-    * A spinner is added for slow connections. Its occurence is handled by ```isLoading``` state.
+* A spinner is added for slow connections. Its occurence is handled by ```isLoading``` state.
