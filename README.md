@@ -42,3 +42,9 @@ This is achived by assigning the data of clicked element to ```selectedAlbum``` 
 The ```selectedAlbum``` state is passed as prop to ```popDetails.js``` file where the particular information is extracted and put in template file.
 
 * A spinner is added for slow connections. Its occurence is handled by ```isLoading``` state.
+
+#App Screens
+
+![MainPage]( ./demo-images/mainPage.png?raw=true "MainPage")
+
+![DetailsPage]( ./demo-images/Details.png?raw=true "DetailsPage")
