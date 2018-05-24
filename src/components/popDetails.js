@@ -34,7 +34,7 @@ let PopDetails = (props,details,toggle)=> {
                     <h5 className="py-2">Artist: {album["im:artist"].label}</h5>
                     <h5 className="py-2">Released on {album["im:releaseDate"].attributes.label}</h5>
                     <h5 className="py-2">Total Track: {album["im:itemCount"].label}</h5>
-                    <h5 className="py-2"><a className="itunes-preview" href={album.link.attributes.href}>Preview on iTunes</a></h5>
+                    <h5 className="py-2"><a className="itunes-preview" target="_blank" href={album.link.attributes.href}>Preview on iTunes</a></h5>
                     <h5 className="py-2">Price: {album["im:price"].label}</h5>
                     <h5 className="py-2">Genre: {album.category.attributes.label}</h5>
                     <h6 className="pt-5">{album.rights.label}</h6>
