@@ -45,4 +45,6 @@ The ```selectedAlbum``` state is passed as prop to ```popDetails.js``` file wher
 
 #App Screens
 
-[MainPage]( ./demo-images/Details.png )
+![MainPage]( ./demo-images/mainPage.png?raw=true "MainPage")
+
+![DetailsPage]( ./demo-images/Details.png?raw=true "DetailsPage")
