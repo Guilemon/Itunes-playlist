@@ -5,6 +5,9 @@ Webpack was used for bundling the app modules together.
 
 * Note: Nodejs Server file is added just for deployment on heroku. The development was done using Webpack Dev Server.
 
+To run using webpack dev server, replace start script in package.json with this:                                                                                
+    ```"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",```
+
 ## APP Structure and Description
 * **Webpack config file:**
     This file contains configuration setting for webpack dev server, module loaders for es6 to es5 traspilation and plugins for production build.
