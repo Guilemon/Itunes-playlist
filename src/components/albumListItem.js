@@ -6,7 +6,7 @@ const AlbumItem = (props,single,selected,menuToggle)=>{
     let selectedAlbum = props.selected
     let showMenu = props.menuToggle
     return (
-        <div className="col-md-3 col-sm-12 px-0" onClick={()=>{selectedAlbum(data);showMenu(true)}}>
+        <div className="col-md-3 col-sm-12 px-0 cursor-pointer" onClick={()=>{selectedAlbum(data);showMenu(true)}}>
           <img className="mx-auto d-block img-fill" src={data["im:image"][2].label}/>
           <Dotdotdot clamp={3}>
             <h5 className="pt-3 px-3">
